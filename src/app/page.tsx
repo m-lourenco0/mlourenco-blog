@@ -1,28 +1,26 @@
 import { ChevronDown, Dot, Move, MoveRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { BlogCard } from '@/components/blog-card'
-import Image from 'next/image'
+import { HomeText } from '@/constants/home-text'
+
+
 
 export default function Home() {
   return (
     <main className="flex flex-col items-start min-h-screen max-w-4xl mx-auto p-8 gap-8">
       <div className="flex flex-col gap-3">
         <h1 className="text-5xl font-serif font-bold leading-tight">
-          Common Sense
+          {HomeText.title}
         </h1>
         <span className="text-base font-serif font-light text-neutral-600">
-          Marcelo Lourenço
+          {HomeText.author}
         </span>
         <p>
-            As the saying goes, &quot;Common sense is not so common&quot;. This blog is an attempt to share some of my common sense.
+          {HomeText.description}
         </p>
       </div>
       <div className='mx-auto'>
         <ChevronDown />
       </div>
-      
-
-      {/* Card posts go here */}
       <div className='flex flex-col space-y-12'>
         <BlogCard
           title='What playing video games taught me about flow state and productivity'

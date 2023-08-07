@@ -15,15 +15,16 @@ interface Props {
 
 const ReadButton = ({ postId }: { postId: string }) => {
   return (
-    <Link href={`/post/${postId}`}>
-      <Button
-        variant={'outline'}
-        className='w-fit h-auto rounded-full font-light border-black text-xs px-3 mt-2 bg-neutral-100 hover:bg-neutral-300/30'
-      >
+    <Button
+      asChild
+      variant={'outline'}
+      className='w-fit h-auto rounded-full font-light border-black text-xs px-3 mt-2 bg-neutral-100 hover:bg-neutral-300/30'
+    >
+      <Link className="w-fit rounded-full mt-2" href={`/post/${postId}`}>
         Continue reading
         <MoveRight className='ml-2 w-4 h-4' />
-      </Button>
-    </Link>
+      </Link>
+    </Button>
   );
 };
 
